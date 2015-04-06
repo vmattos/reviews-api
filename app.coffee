@@ -3,8 +3,9 @@ Module dependencies.
 ###
 
 restify = require 'restify'
+pkg = require './package.json'
 
-server = restify.createServer version: "0.0.1", name: 'reviews-api'
+server = restify.createServer version: pkg.version, name: 'reviews-api'
 
 config =
   port: process.env.PORT or 80
